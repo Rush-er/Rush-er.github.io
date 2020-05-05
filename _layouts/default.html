@@ -4,7 +4,8 @@ layout: compress
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+   
+    
     {% if site.analytics-google %}
         {% include analytics-google.html %}
     {% endif %}
@@ -19,10 +20,11 @@ layout: compress
 
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
-
+    <link rel="shortcut icon" type="image/jpg" href="profile.jpg">
     <style>
     {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
     {{ scss_sheet | scssify }}
+    
     </style>
 
 </head>
@@ -44,6 +46,7 @@ layout: compress
     </div>
 
     {% include icons.html %}
+    {% include intergram.html %}
 
 </body>
 </html>
